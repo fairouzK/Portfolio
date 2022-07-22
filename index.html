@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="color-scheme" content="light dark" />
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=The+Nautigal&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <title>Feruz - Portfolio</title>
+  </head>
+
+  <body>
+  
+    <script>
+      const colorScheme = localStorage.getItem("color-scheme") || "light-mode";
+    </script>
+
+    <header id="outer-nav">
+      <nav id="header-nav" class="navbar navbar-expand-md">
+        <div class="container-fluid navbar-header">       
+          <div class="name-brand">
+            <a class="logo-img" href="/">
+                <img id="logo" src="images/Logo_lightMode.png" width="50px" height="50px">
+            </a>
+  
+            <div class="navbar-brand">
+              <a id="logo" href="index.html" class="d-none d-md-block"></a>
+            </div>
+          </div>
+
+          <button type="button" class="navbar-toggler" 
+                  id="toggle-button" data-toggle="collapse" data-target="#side-nav" 
+                  aria-expanded="false" onclick="openNav()"> 
+              <div class="animated-icon" id="animated-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </div> 
+          </button>
+
+          <!-- Collapsable content -->
+          <div id="side-nav" class="sidenav collapse navbar-collapse nav-right">
+            <ul id="nav-list" class="navbar-nav ml-auto">
+              <li class="nav-item"><a class="nav-link" id="home-link" href="#home">Home</a></li>
+              <li class="nav-item"><a class="nav-link" id="about-link" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" id="skills-link" href="#skills">Skills</a></li>
+              <li class="nav-item"><a class="nav-link" id="projects-link" href="#projects">Projects</a></li>
+              <!-- <li class="nav-item"><a class="nav-link" href="#services">Services</a></li> -->
+              <!-- <li class="nav-item"><a class="nav-link" href="#">Services</a></li> -->
+              <li class="nav-item d-block d-md-none"><a class="nav-link" id="contact-link" href="#contact">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="resume.pdf" target="_blank">Resume</a></li>
+              <li class="toggle-light-fullscreen">
+                <a class="nav-link" class="toggle-light">
+                  <i class="fas fa-sun" onclick="toggleDarkMode()"></i>    
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- </div>       -->
+        </div> 
+     </nav> 
+    </header> 
+    
+    <main class="container-fluid" id="main">
+      <div class="cc-contactpop contact-icons">
+        <a href="mailto: feruzkiflay@gmail.com" target="_blank">
+          <i class="fa-solid fa-envelope contact-icon"></i></a>
+        <a href="https://github.com/fairouzK" target="_blank">
+          <i class="fa-brands fa-github contact-icon"></i></a>
+        <a href="https://www.linkedin.com/in/feruz-elmay-5b1856166/" target="_blank">
+          <i class="fa-brands fa-linkedin contact-icon"></i></a>
+        <a><i class="fa-brands fa-instagram contact-icon"></i></a>
+        <a><i class="fa-brands fa-telegram contact-icon"></i></a>
+      </div>
+
+      <!-- Main content start -->
+      
+
+      <div class="main-content">
+
+        <div class="lds-ellipsis" id="preloader">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <!-- ########### Home ########### -->
+        <section class="home section reveal" id="home">
+          <div class="container home-container">
+            <!-- <div class="row row-home"> -->
+              <div class="home-info">
+                <h3 class="hello">Welcome to my page!
+                  <span class="hand-wave">&#128075;</span>
+                  I'm
+                </h3>
+                <h3>
+                  <span class="name"> Feruz Kiflay.</span>
+                  <!-- <span class="hand-wave">&#128075;</span> -->
+                </h3>
+                <h3 class="my-profession"><span class="prop"> A </span><span class="profession"> Software Engineer.</span></h3>
+                <!-- <i class="fa-solid fa-hand-wave"></i> -->
+                                
+                <!-- <p>based in Abu-Dhabi, UAE and currently i am pursuing my masters while working as research assistant in khalifa university. 
+                  I develop websites, applications and occasionally design user interfaces. blockchain has got my attention now, 
+                  check out what im building.
+                </p> -->
+                <div class="home-buttons">
+                  <a href="mailto: feruzkiflay@gmail.com" class="home-btn get-in-touch">Get in Touch!</a>
+                  <a href="https://github.com/fairouzK/container-shipment-traceability.git" target="_blank" class="home-btn latest-projects">My Latest Project</a>
+                </div>                
+              </div>
+              <!-- <div class="home-img padd-15">
+                <img src="images/avatar_bg.png" alt="" class="avatarbg">
+                <img src="images/Shopaholics - Avatar.png" alt="" class="avatar">
+              </div> -->
+            <!-- </div> -->
+          </div>
+        </section>
+        <!-- ########### Home End ########### -->
+
+        <!-- ########### About ########### -->
+        <section class="about section reveal" id="about">
+          <div class="container about-container">
+            <!-- <div class="row"> -->
+              <!-- <div class="about-img padd-15">
+                <img src="images/avatar_bg.png" alt="" class="avatarbg">
+                <img src="images/Shopaholics - Avatar.png" alt="" class="avatar">
+              </div> -->
+              <!-- <h2 class="hello-about">About Me</h2> -->
+              <!-- <div class="about-flex"> -->
+              <div class="about-info d-flex">
+                <div class="profile-image d-flex justify-content-center">
+                  <img src="images/Shopaholics - Avatar.png" alt="" class="avatar d-none d-md-block">                       
+                </div>                 
+                <div class="about-detail"> 
+                  <h2 class="get-to-knowme">Get to know Me</h2>  
+                  <p class="work-sans">Hi! My name is Feruz and I'm a software developer with
+                    a passion for front end development and occasionally backend and design. 
+                    I'm currently a second year masters student at Khalifa University
+                    researching on Blockchain technology for supply chain. My recent projects include smart contracts 
+                    for traceability and data provenance in the maritime industry.<br>
+                    Besides software development, I engage in building machine learning models and cybersecurity.
+                    As for my hobbies, 'curious' could sum it all up but I sure do like to doodle all over my text books. 
+                </p>
+                </div>                  
+              </div>
+
+              <div class="tldr">
+                <h4>Tl;dr</h4>
+                <div class="tldr-components">
+                  <div><span class="tldr-component-wrapper"><h5>MSc. KU</h5><span class="iconify" data-icon="icons8:student"></span></span></div>
+                  <div><span class="tldr-component-wrapper"><h5>Web dev</h5><span class="iconify" data-icon="el:website-alt"></span></span></div>
+                  <div><span class="tldr-component-wrapper"><h5>App dev</h5><span class="iconify" data-icon="carbon:application-mobile"></span></span></div>
+                  <div><span class="tldr-component-wrapper tldr-component-lower"><h5>Web3.0</h5><span class="iconify" data-icon="logos:web3js"></span></span></div>
+                  <div><span class="tldr-component-wrapper tldr-component-lower"><h5>Doodles</h5><span class="iconify" data-icon="material-symbols:draw"></span></span></div>
+                </div>
+              </div>
+            <!-- </div> -->
+          </div>
+        </section>
+        <!-- ########### About End ########### -->
+
+
+        <!-- ########### Skills ########### -->
+        <section class="skills section reveal" id="skills">
+          <div class="container skills-container">
+            <div>
+              <h3 class="skills-header section-title">My Skills</h3>
+              <h4 class="skills-sub-header josefin-sans">Technologies I Work With</h4>
+              <div class="my-skills">
+                <div class="skills-title skills-component">
+                  <h4>Development</h4>
+                </div>
+                <div class="skills-icons skills-component margin-20">
+                  <div><p>HTML5</p></div>
+                  <div><p>CSS3</p></div>
+                  <div><p>JavaScript</p></div>
+                  <div><p>Bootstrap</p></div>
+                  <div><p>React JS</p></div>
+                  <div><p>PHP</p></div>
+                  <div><p>Python</p></div>
+                  <div><p>Solidity</p></div>
+                  <div><p>Android</p></div>
+                  <div><p>Linux</p></div>                   
+                </div>
+
+                <div class="skills-title skills-component">
+                  <h4>Tools</h4>
+                </div>
+                <div class="skills-component">
+                  <div><p>SQL</p></div>
+                  <div><p>Truffle</p></div>
+                  <div><p>Ganache</p></div>
+                  <div><p>Web3</p></div>
+                  <div><p>MetaMask</p></div>
+                  <div><p>Pinata</p></div>
+                  <div><p>Git</p></div>
+                  <div><p>Invision</p></div>
+                  <div><p>Figma</p></div>
+                </div>                  
+              </div> 
+            </div>
+          </div>
+        </section>
+        <!-- ########### Skills End ########### -->
+
+        <!-- ########### Projects ########### -->
+        <section class="projects section reveal" id="projects">
+          <div class="container proj-container">
+            <div class="projects-header">
+              <h3 class="section-title">My Projects</h3>
+              <h4 class="projects-sub-header josefin-sans">Some of The Work I have Done</h4>
+              <!-- <p>Most recent and main projects</p> -->
+              <!-- <h4>What I have Built</h4> -->
+            </div>
+              <div class="my-projects">
+
+                <!-- Project-1 -->
+                <div class="project-components project-details project-components-left">
+                  <h4><span class="project-numbering">01. </span> Container Shipment Traceability</h4>
+                  <p class="project-info"> A smart contract based implementation for shipping containers in international shipping.</p>
+                    
+                  <div>
+                    <div class="tech-used">
+                      <!-- <p>Tech used</p> -->
+                      <div><p>Solidity</p></div>
+                      <div><p>Remix IDE</p></div>
+                      <div><p>Oyente</p></div>
+                      <div><p>Linux</p></div>
+                    </div>
+                    <div class="project-buttons">
+                      <a href="https://github.com/fairouzK/container-shipment-traceability.git" target="_blank" class="code">
+                        <i class="fa-brands fa-github contact-icon"></i></a>
+                    </div> 
+
+                  </div>
+                </div>
+                
+                <div class="project-components project-image-div">
+                  <img class="project-image" src="images/vulnerability-exploiter.jpg" alt="">
+                </div>
+
+                <!-- Project-2 -->
+                <div class="project-components project-image-div project-image-left">
+                  <img class="project-image" src="images/vulnerability-exploiter.jpg" alt="">
+                </div>
+
+                <div class="project-components project-details  project-components-right">
+                  <h4><span class="project-numbering">02. </span>Theme App</h4>
+                  <p class="project-info"> Access the external 
+                    storage of android phone applications and manipulate the data through a Theme app. 
+                    The attack allows the data in the external 
+                    storage to be manipulated.</p>
+                  <div>
+                    <div class="tech-used">
+                      <!-- <p>Tech used</p> -->
+                      <div><p>Java</p></div>
+                      <div><p>Android Studio</p></div>
+                    </div>
+                    <div class="project-buttons">
+                      <a href="https://github.com/fairouzK/ThemeApp-Android-Permission-Vulnerability-Exploit.git" target="_blank" class="code">
+                        <i class="fa-brands fa-github contact-icon"></i>
+                      </a>
+                      <!-- <a href="" class="demo">Demo</a> -->
+                    </div> 
+                  </div>
+                </div>
+
+
+                <!-- Project-3 -->
+                <div class="project-components project-details project-components-left">
+                  <h4><span class="project-numbering">03. </span>Mutli-Modal Biometrics Authentication</h4>
+                  <p class="project-info">A senior design project that uses Iris, Face and ECG to authenticate users.
+                    It uses pretrained deep learning models such as ResNet50 and VGG16.
+                  </p>
+                  <div>
+                    <div class="tech-used">
+                      <!-- <p>Tech used</p> -->
+                      <div><p>Python</p></div>
+                      <div><p>Jupyter Notebook</p></div>
+                      <div><p>Google Colab</p></div>
+                    </div>
+                    <div class="project-buttons">
+                      <a href="https://github.com/EriProject/Multimodal_Biometrics.git" target="_blank" class="code">
+                        <i class="fa-brands fa-github contact-icon"></i></a>
+                      <!-- <a href="" class="demo">Demo</a> -->
+                    </div> 
+
+                  </div>
+                </div>
+                
+                <div class="project-components project-image-div">
+                  <img class="project-image" src="images/vulnerability-exploiter.jpg" alt="">
+                </div>
+
+              </div>
+              <h4 class="otherprojects-sub-header">Other Noteworthy Projects</h4>
+              <div class="noteworthy-projects-wrapper reveal">
+                <!-- other project 1 -->
+                <div class="other-project project-components">
+                  <img class="other-project-img" src="images/vulnerability-exploiter.jpg" alt="">
+                  <div class="other-project-link">
+                    <div class="repo-icon"><i class="fa-brands fa-github "></i></div>
+                    <p class="other-project-detail-hidden d-block d-lg-none">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                      Minima aut consequuntur quae distinctio necessitatibus 
+                    </p>
+                  </div>
+                  <h4 class="other-project-title">Project Title</h4>
+                  <p class="other-project-detail d-none d-md-block">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Minima aut consequuntur quae distinctio necessitatibus 
+                  </p>
+                  <div class="other-project-tech-used">
+                    <div><p>Python</p></div>
+                    <div><p>Jupyter</p></div>
+                    <div><p>Google</p></div>
+                  </div>
+                </div>
+                <!-- other project 2 -->
+                <div class="other-project project-components">
+                  <img class="other-project-img" src="images/vulnerability-exploiter.jpg" alt="">
+                  <div class="other-project-link">
+                    <div class="repo-icon"><i class="fa-brands fa-github "></i></div>
+                    <p class="other-project-detail-hidden d-block d-lg-none">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                      Minima aut consequuntur quae distinctio necessitatibus 
+                    </p>
+                  </div>
+                  <h4 class="other-project-title">Project Title</h4>
+                  <p class="other-project-detail d-none d-md-block">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Minima aut consequuntur quae distinctio necessitatibus 
+                  </p>
+                  <div class="other-project-tech-used">
+                    <div><p>Python</p></div>
+                    <div><p>Jupyter</p></div>
+                    <div><p>Google</p></div>
+                  </div>
+                </div>
+                <!-- other project 3 -->
+                <div class="other-project project-components">
+                  <img class="other-project-img" src="images/vulnerability-exploiter.jpg" alt="">
+                  <div class="other-project-link">
+                    <div class="repo-icon"><i class="fa-brands fa-github "></i></div>
+                    <p class="other-project-detail-hidden d-block d-lg-none">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                      Minima aut consequuntur quae distinctio necessitatibus 
+                    </p>
+                  </div>
+                  <h4 class="other-project-title">Project Title</h4>
+                  <p class="other-project-detail d-none d-md-block">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Minima aut consequuntur quae distinctio necessitatibus 
+                  </p>
+                  <div class="other-project-tech-used">
+                    <div><p>Python</p></div>
+                    <div><p>Jupyter</p></div>
+                    <div><p>Google</p></div>
+                  </div>
+                </div>
+                <!-- other project 4 -->
+                <div class="other-project project-components">
+                  <img class="other-project-img" src="images/vulnerability-exploiter.jpg" alt="">
+                  <div class="other-project-link">
+                    <div class="repo-icon"><i class="fa-brands fa-github "></i></div>
+                    <p class="other-project-detail-hidden d-block d-lg-none">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                      Minima aut consequuntur quae distinctio necessitatibus 
+                    </p>
+                  </div>
+                  <h4 class="other-project-title">Project Title</h4>
+                  <p class="other-project-detail d-none d-md-block">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Minima aut consequuntur quae distinctio necessitatibus 
+                  </p> 
+                  <div class="other-project-tech-used">
+                    <div><p>Python</p></div>
+                    <div><p>Jupyter</p></div>
+                    <div><p>Google</p></div>
+                  </div>
+                </div>
+              </div>
+
+            <!-- </div> -->
+          </div>
+        </section>
+        <!-- ########### Projects End ########### -->
+
+
+        <!-- ########### Exprience ########### -->
+        <section class="exprience section reveal" id="projects">
+          <div class="container exp-container">
+            <!-- <div class="row"> -->
+              <div>
+                <h2 class="section-title exprience-header">Exprience</h2>
+                <h4 class="exprience-sub-header">Where I have Worked</h4>
+              </div>
+              
+              <div class="timeline">
+
+                <!-- Job 1 -->
+                <div class="timeline-component timeline-component-date">
+                  <div class="timeline-date">January 2021 - Present</div>
+                </div>
+                <div class="timeline-middle">
+                  <div class="timeline-point"></div>
+                </div>
+                <div class="timeline-component timeline-component--bg">
+                  <h2 class="timeline-title">Research Assistant</h2>
+                  <h4 class="timeline-employer">Khalifa University</h4>
+                  <p class="timeline-paragraph">
+                    Research on blockchain implementations in maritime supply chain.
+                    Write performant and maintainable code for smart contracts.
+                    Deployed smart contracts on test networks and analys cost and security aspects prior to deployment.
+                    Published a review paper of the Artificial intelligence-based implementations.	
+                  </p>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="timeline-component timeline-component--bg timeline-component-even">
+                  <h2 class="timeline-title">Teaching Assistant</h2>
+                  <h4 class="timeline-employer">Khalifa University</h4>
+                  <p class="timeline-paragraph">
+                    Taught and assisted students with Java programming labs.
+                    Organized and prepared learning materials for lab.
+                    Assisted students with class projects outside lab times.
+                    Supervised weekly lab sessions that included programming exercises.
+                    Assisted professor with grading homework and project assignments. 
+                  </p>
+                </div>
+                <div class="timeline-middle">
+                  <div class="timeline-point"></div>
+                </div>
+                <div class="timeline-component timeline-component-date timeline-component-date-even">
+                  <div class="timeline-date timeline-date-even">January 2022 - May 2022</div>
+                </div>
+               
+                
+                <!-- Job 3 -->
+                <div class="timeline-component timeline-component-date">
+                  <div class="timeline-date">June 2019 - August 2019</div>
+                </div>
+                <div class="timeline-middle">
+                  <div class="timeline-point"></div>
+                </div>
+                <div class="timeline-component timeline-component--bg">
+                  <h2 class="timeline-title">Software Engineer Intern</h2>
+                  <h4 class="timeline-employer">Ankabut Internet Service Provider</h4>
+                  <p class="timeline-paragraph">
+                    Managed Linux and Windows servers.
+                    Deployed virtual servers, run hardening scripts, and inspected report generated for vulnerable aspects.
+                    Set up file servers and managed accessibility of shared folders.
+                    Managed a DHCP server that assigns IP addresses to joining devices.
+                  </p>
+                </div>
+
+                 <!-- Job 4 -->
+                 <div class="timeline-component timeline-component--bg timeline-component-even">
+                  <h2 class="timeline-title">Student Assistant Librarian</h2>
+                  <h4 class="timeline-employer">Khalifa University Libraries</h4>
+                  <p class="timeline-paragraph">
+                    Processed, sorted and shelved on average about 200 donated and new arrival collections per month.  
+                    Provided students and faculty with assistance and information regarding the library services.                
+                  </p>
+                </div>
+                <div class="timeline-middle">
+                  <div class="timeline-point"></div>
+                  <div class="timeline-point timeline-point-bottom"></div>
+                </div>
+                <div class="timeline-component timeline-component-date timeline-component-date-even">
+                  <div class="timeline-date timeline-date-even">May 2018 - December 2019</div>
+                </div>
+              </div>
+            <!-- </div> -->
+          </div>
+        </section>
+        <!-- ########### Exprience End ########### -->
+
+
+        <!-- ########### Education ########### -->
+        <!-- <section class="education section reveal" id="education">
+          <div class="container edu-container">
+            <h2>Education</h2>
+            <div class="education-component msc">
+              <p><h3>Master of Science in Computer Engineering</h3><p>January 2021 - Present</p></p>
+              <h4 class="university">Khalifa University</h4>
+              <p>
+                Researching on blockchain and NFTs for supply chain and shipping logistics.<br>
+                Presented my thesis in graduates conference organized by KU.<br>
+                Publishsed a paper on AI, and submitted one (in progress).
+              </p>
+
+            </div>
+            <div class="education-component bsc">
+              <p><h3>Bachelor of Science in Computer Engineering</h3><p>January 2016 - December 2020</p></p>
+              <h4 class="university">Khalifa University</h4>
+              <p>Graduated with High honors.<br>
+                Participated in a team that developed an authentication system using deep learning.<br>
+                Exploited vulnerability on android phones. 
+                Designed and developed online ordering app with a team in Hackathon 2020.<br>
+                Nominated as a student mentor with academic excellence by KU.<br>       
+                President’s list in Spring 2018, and Dean’s list in Fall 2017 and 2018.  
+            </p>
+            </div>
+          </div>
+        </section> -->
+        <!-- ########### Education End ########### -->
+
+
+
+        <!-- ########### Publication ########### -->
+        <section class="publications section reveal" id="projects">
+          <div class="container pub-container">
+            <h3 class="section-title section-title publications-header">Publications</h3>
+            <h4 class="publication-sub-header">What Populates My Google Scholar Page</h4>
+            <div class="papers">
+              <div id="paper-1">
+                  <h4> 
+                    <a href="https://academic.oup.com/ijlct/article-abstract/doi/10.1093/ijlct/ctac043/6586509" target="_blank">
+                      <span class="numbering">01. </span> 
+                      <span class="paper-title">Journal: Artificial Intelligence for Water and Energy Nexus Demand Forecasting: A Review</span>
+                    </a>
+                  </h4> 
+                  <span class="paper-details">
+                    <p class="publisher">Publisher: International Journal of Low-Carbon Technologies.</p>
+                    <p class="paper-date">May 2022</p>
+                  </span> 
+              </div>
+            </div>
+            <div class="btn-more-papers">
+              <a class="btn-coming-soon">+more coming soon</a>
+            </div>
+            <div class="google-scholar">
+              <a class="google-scholar-page" href="https://scholar.google.com/citations?user=rYlL40EAAAAJ&hl=en" target="_blank" >My Google Scholar Page</a>
+            </div>
+          </div>
+        </section>
+        <!-- ########### Publication End ########### -->
+
+
+        <!-- ########### Services ########### -->
+        <section class="services section reveal" id="projects">       
+          <div class="container services-container">
+            <div class="services-wrapper">
+              <h3 class="section-title services-header">Services</h3>
+              <h4 class="services-sub-header">What I Do</h4>
+              <div class="services-components">
+                <div class="web-dev service">
+                  <h2> Website and Application Development</h2>
+                  <i class="fa-solid fa-code"></i>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Veritatis at enim provident commodi perspiciatis</p>
+                </div>
+                <div class="ml-dev service">
+                  <h2> Machine Learning Models Building</h2>
+                  <i class="fa-solid fa-brain"></i>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Veritatis at enim provident commodi perspiciatis</p>
+                </div>
+                <div class="bc-dev service">
+                  <h2> Blockchain and Smart Contracts Development</h2>
+                  <i class="fa-brands fa-hive"></i>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Veritatis at enim provident commodi perspiciatis</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ########### Services end ########### -->
+
+
+        <!-- ########### Contact ########### -->
+        <section class="contact section reveal" id="contact">       
+          <div class="container contact-container" >
+            <div class="">
+              <h3 class="section-title contact-header">Contact Me</h3>
+              <h4 class="contact-sub-header">Would Love To Hear From You!</h4>
+              <div class="contact-components">
+                <!-- <form class="contact-form"> 
+                  <input class="contact-form-text" type="text" placeholder="Your Name">
+                  <input class="contact-form-text" type="email" placeholder="Your Email">
+                  <input class="contact-form-text" type="text" placeholder="Your Message">
+                  <button class="contact-send-btn" type="submit" value="Send">Send</button>
+                </form> -->
+                <a class="contact-say-hello" href="mailto: feruzkifla@gmail.com">Say Hello!</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ########### Contact end ########### -->
+
+        
+        <a class="back-to-top" href="#home">
+          <span class="iconify" data-icon="bytesize:arrow-top"></span>
+        </a>
+
+        <!-- Main content End -->
+      </div>   
+    </main>
+
+    <footer class="panel-footer">
+      <div class="text-center footer-details">
+        <!-- <div>   -->
+        <span>Feruz Elmay 2022</span>
+          <!-- <i class="fa-solid fa-location-dot"></i> -->
+          <!-- <span class="material-icons">place</span>    -->
+          <!-- <span class="location">Abu Dhabi, UAE</span> -->
+        <!-- </div> -->
+        <div class="cc-contactpop contact-icons-footer">
+          <a href="mailto: feruzkiflay@gmail.com" target="_blank">
+            <i class="fa-solid fa-envelope contact-icon"></i></a>
+          <a href="https://github.com/fairouzK" target="_blank">
+            <i class="fa-brands fa-github contact-icon"></i></a>
+          <a href="https://www.linkedin.com/in/feruz-elmay-5b1856166/" target="_blank">
+            <i class="fa-brands fa-linkedin contact-icon"></i></a>
+          <a><i class="fa-brands fa-instagram contact-icon"></i></a>
+          <a><i class="fa-brands fa-telegram contact-icon"></i></a>
+        </div>
+      </div>    
+    </footer>
+
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+
+  </body>
+</html>
+
+
+
+     
