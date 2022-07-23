@@ -34,14 +34,14 @@ let darkModeState = false;
 const button = document.querySelector(".toggle-light");
 const useDark = window.matchMedia("(prefers-color-scheme: dark)");
 
-// function setLogoImage(state){
-//   if(state === "dark-mode") {  
-//     $("#logo").attr("src", "images/Logo_nightMode.png");
-//   }
-//   else {
-//     $("#logo").attr("src", "images/Logo_lightMode.png");
-//   } 
-// }
+function setLogoImage(state){
+  if(state === "dark-mode") {  
+    $("#logo").attr("src", "images/Logo_nightMode.png");
+  }
+  else {
+    $("#logo").attr("src", "images/Logo_lightMode.png");
+  } 
+}
 
 // Toggles the "dark-mode" class
 function toggleDarkMode(state) {
@@ -135,7 +135,7 @@ function reveal() {
 
 window.addEventListener("scroll", reveal);
 
-var loader = document.getElementById("preloader");
+var loader = document.querySelector(".lds-ellipsis");
 window.addEventListener("load", function(){
   loader.style.display = "none";
 });
