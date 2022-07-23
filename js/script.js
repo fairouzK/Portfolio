@@ -34,14 +34,14 @@ let darkModeState = false;
 const button = document.querySelector(".toggle-light");
 const useDark = window.matchMedia("(prefers-color-scheme: dark)");
 
-function setLogoImage(state){
-  if(state === "dark-mode") {  
-    $("#logo").attr("src", "images/Logo_nightMode.png");
-  }
-  else {
-    $("#logo").attr("src", "images/Logo_lightMode.png");
-  } 
-}
+// function setLogoImage(state){
+//   if(state === "dark-mode") {  
+//     $("#logo").attr("src", "images/Logo_nightMode.png");
+//   }
+//   else {
+//     $("#logo").attr("src", "images/Logo_lightMode.png");
+//   } 
+// }
 
 // Toggles the "dark-mode" class
 function toggleDarkMode(state) {
