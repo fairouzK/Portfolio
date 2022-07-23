@@ -217,7 +217,7 @@ body {
         right: 0px;
         display: block;
         position: fixed; /* Stay in place */
-        z-index: 1; /* Stay on top */
+        z-index: 2;
         padding-top: 100px;
         background: radial-gradient(circle, var(--color-sidenav), var(--color-sidenav));
         width: 520px;

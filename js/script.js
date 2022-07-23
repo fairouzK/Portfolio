@@ -36,10 +36,10 @@ const useDark = window.matchMedia("(prefers-color-scheme: dark)");
 
 function setLogoImage(state){
   if(state === "dark-mode") {  
-    $("#logo").attr("src", "../images/Logo_nightMode.png");
+    $("#logo").attr("src", "images/Logo_nightMode.png");
   }
   else {
-    $("#logo").attr("src", "../images/Logo_lightMode.png");
+    $("#logo").attr("src", "images/Logo_lightMode.png");
   } 
 }
 
