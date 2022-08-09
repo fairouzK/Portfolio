@@ -921,7 +921,7 @@ body {
     margin: 20px 30px 5px 5px;
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-    height: max-content;
+    /* height: max-content; */
     transition: .5s ease;
     /* width: 50%; */
     position: relative;
@@ -938,7 +938,7 @@ body {
     opacity: 0;
     transition: 0.5s ease;
     position: absolute;
-    top: 50%;
+    top: 43%;
     left: 50%;
     width: 100%;
     transform: translate(-50%, -50%);
@@ -950,6 +950,9 @@ body {
     /* background-color: #09a293; */
     color: #ddd;
     font-size: 40px;
+}
+.repo-icon a {
+    color: var(--color-default);
 }
 .other-project:hover .other-project-img {
     opacity: 0.6;
@@ -1014,13 +1017,14 @@ body {
         grid-template-columns: 1fr; 
     }
     .noteworthy-projects-wrapper .other-project{
-        /* height: 80%; */
+        height: max-content;
         transition: .5s ease;
         width: 90%;
         position: relative;
     }
     .other-project-link {
-        top: 30%;
+        top: 40%;
+        left: 50%;
     }
     .other-project-tech-used {
         margin-bottom: 10px;
