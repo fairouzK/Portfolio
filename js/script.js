@@ -67,12 +67,12 @@ toggleDarkMode(localStorage.getItem("dark-mode") == "true");
 useDark.addListener((evt) => toggleDarkMode(evt.matches));
 
 // Toggles the "dark-mode" class on click and sets localStorage state
-button.addEventListener("click", () => {
-  darkModeState = !darkModeState;
+// button.addEventListener("click", () => {
+//   darkModeState = !darkModeState;
 
-  // toggleDarkMode(darkModeState);
-  setDarkModeLocalStorage(darkModeState);
-});
+//   // toggleDarkMode(darkModeState);
+//   setDarkModeLocalStorage(darkModeState);
+// });
 
 
 $(document).ready(function() {
