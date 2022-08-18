@@ -915,6 +915,7 @@ body {
     /* grid-column-gap: 30px; */
     flex-wrap: wrap;
     margin-left: 10px;
+    padding-right: 2px;
     /* margin-top: 30px; */
 }
 .noteworthy-projects-wrapper .other-project{
