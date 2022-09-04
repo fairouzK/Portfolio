@@ -2,6 +2,6 @@
 
 First iteration of my personal website
 
-##### Resources
+###### Resources
 
 https://codepen.io/alvarotrigo/pen/PoKamZy
