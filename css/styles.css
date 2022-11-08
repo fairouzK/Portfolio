@@ -653,7 +653,7 @@ body {
     flex-wrap: wrap;
 }
 .my-skills .skills-component div {
-    flex: 0 0 20%; 
+    flex: 0 0 16%; 
 }
 .skills-title h4{
     width: 100%;
@@ -920,6 +920,7 @@ body {
     flex-wrap: wrap;
     margin-left: 10px;
     padding-right: 2px;
+    height: min-content;
     /* margin-top: 30px; */
 }
 .noteworthy-projects-wrapper .other-project{
@@ -933,7 +934,7 @@ body {
 }
 .other-project-img {
     width: 100%;
-    height: 50%;
+    height: 100%;
     display: block;
     transition: .5s ease;
     backface-visibility: hidden;
@@ -943,7 +944,7 @@ body {
     opacity: 0;
     transition: 0.5s ease;
     position: absolute;
-    top: 43%;
+    top: 50%;
     left: 50%;
     width: 100%;
     transform: translate(-50%, -50%);
@@ -954,13 +955,13 @@ body {
 .repo-icon {
     /* background-color: #09a293; */
     color: #ddd;
-    font-size: 40px;
+    font-size: 20px;
 }
 .repo-icon a {
     color: var(--color-default);
 }
 .other-project:hover .other-project-img {
-    opacity: 0.6;
+    opacity: 0.1;
 }
 .other-project:hover .other-project-link{
     opacity: 1.5;
@@ -985,9 +986,10 @@ body {
     margin-bottom: 5px;
 }
 .other-project-tech-used {
-    display: flex;
-    align-items: center;
-    margin-left: 20%;
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto;
+    /* align-items: center; */
+    margin-left: 7px;
     margin-bottom: 10px;
     margin-top: 10px;
 }
@@ -998,11 +1000,11 @@ body {
     padding: 0px 4px;
 }
 .other-project-tech-used div {
-    background: rgba(255, 255, 255, 0.2);
+    /* background: rgba(255, 255, 255, 0.2); */
     vertical-align: middle;
     margin-right: 5px;
     padding: 0; 
-    flex: 0 0 20%;
+    /* flex: 0 0 20%; */
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -1369,6 +1371,8 @@ body {
 }
 .services-components {
     display: flex;
+    margin-left: 10%;
+    /* grid-template-columns: auto auto; */
 }
 .services-sub-header {
     color: var(--color-subheader);
@@ -1386,8 +1390,8 @@ body {
     /* vertical-align: middle; */
 }
 .services-container .service {
-    flex: 0 0 30%;
-    margin-left: 20px;
+    flex: 0 0 40%;
+    margin-left: 20%;
     padding: 20px 20px;
     background: rgba(9, 162, 147, 0.1);
     box-shadow: 0 0 5px rgba(90, 162, 147, 0.2);
