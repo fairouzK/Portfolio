@@ -28,12 +28,19 @@ document.onclick = function(e) {
   }
 }
 
+// Read system settings theme
+const useDark = window.matchMedia("(prefers-color-scheme:dark)").matches;
+if(useDark) {
+  localStorage.setItem("dark-mode", useDark);
+  document.documentElement.classList.toggle("dark-mode", useDark);
+}
+
 // Logo changer
 let darkModeState = false;
 
-const button = document.querySelector(".toggle-light");
-const useDark = window.matchMedia("(prefers-color-scheme: dark)");
+// const button = document.querySelector(".toggle-light");
 
+const currentTheme = localStorage.getItem("theme") || "light";
 
 // function setLogoImage(state){
 //   if(state === "dark-mode") {  
@@ -44,28 +51,30 @@ const useDark = window.matchMedia("(prefers-color-scheme: dark)");
 //   } 
 // }
 
-// Toggles the "dark-mode" class
+// Toggles the "dark-mode" class in css
 function toggleDarkMode(state) {
-  document.documentElement.classList.toggle("dark-mode", state);
-  darkModeState = state; 
-  // console.log("YES");
+document.documentElement.classList.toggle("dark-mode", state);
+darkModeState = !darkModeState; 
+// console.log(darkModeState);
   // setLogoImage(document.documentElement.classList.value); 
+setDarkModeLocalStorage(darkModeState);
 }
 
 
 // Sets localStorage state
-function setDarkModeLocalStorage(state) {
-  localStorage.setItem("dark-mode", state);
+function setDarkModeLocalStorage(darkModeState) {
+  localStorage.setItem("dark-mode", darkModeState);
+  // console.log(state);
 }
 
 // Initial setting
-toggleDarkMode(localStorage.getItem("dark-mode") === "true");
+// toggleDarkMode(localStorage.getItem("dark-mode") === "true");
 
 
 // Listen for changes in the OS settings.
 // Note: the arrow function shorthand works only in modern browsers, 
 // for older browsers define the function using the function keyword.
-useDark.addListener((evt) => toggleDarkMode(evt.matches));
+// useDark.addListener((evt) => toggleDarkMode(evt.matches));
 
 // Toggles the "dark-mode" class on click and sets localStorage state
 // button.addEventListener("click", () => {
@@ -75,7 +84,7 @@ useDark.addListener((evt) => toggleDarkMode(evt.matches));
 //   setDarkModeLocalStorage(darkModeState);
 // });
 
-
+// Change light toggle icons
 $(document).ready(function() {
   // Light toggle
   $('.toggle-light').click(function() {
@@ -83,6 +92,7 @@ $(document).ready(function() {
   });
 });
 
+// Nav-bar hightlighter
 $(document).scroll(function () {
   const li = document.querySelectorAll(".nav-link");
   // console.log(li);
