@@ -34,21 +34,22 @@ let darkModeState = false;
 const button = document.querySelector(".toggle-light");
 const useDark = window.matchMedia("(prefers-color-scheme: dark)");
 
-function setLogoImage(state){
-  if(state === "dark-mode") {  
-    $("#logo").attr("src", "images/Logo_nightMode.png");
-  }
-  else {
-    $("#logo").attr("src", "images/Logo_lightMode.png");
-  } 
-}
+
+// function setLogoImage(state){
+//   if(state === "dark-mode") {  
+//     $("#logo").attr("src", "images/Logo_nightMode.png");
+//   }
+//   else {
+//     $("#logo").attr("src", "images/Logo_lightMode.png");
+//   } 
+// }
 
 // Toggles the "dark-mode" class
 function toggleDarkMode(state) {
   document.documentElement.classList.toggle("dark-mode", state);
   darkModeState = state; 
   // console.log("YES");
-  setLogoImage(document.documentElement.classList.value); 
+  // setLogoImage(document.documentElement.classList.value); 
 }
 
 
@@ -58,7 +59,7 @@ function setDarkModeLocalStorage(state) {
 }
 
 // Initial setting
-toggleDarkMode(localStorage.getItem("dark-mode") == "true");
+toggleDarkMode(localStorage.getItem("dark-mode") === "true");
 
 
 // Listen for changes in the OS settings.
