@@ -1,8 +1,8 @@
 # Portfolio
 
-First iteration of my personal website
+First iteration of personal website
 
-###### Resources
+##### Resources
 
 Avatars: blush.design
 
