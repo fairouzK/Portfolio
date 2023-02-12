@@ -1,6 +1,6 @@
 # Portfolio
 
-First iteration of personal website
+Personal website
 
 ##### Resources
 
